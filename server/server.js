@@ -1,6 +1,10 @@
 const express = require("express");
 const app = express();
+const router = require("./router/auth-router")
 
+app.use("/api/auth", router);
+
+/*
 app.get("/", (req, res) => {
     res.status(200).send("Welcome! spiderman-MJ on server side!");
 } );
@@ -8,6 +12,7 @@ app.get("/", (req, res) => {
 app.get("/register", (req,res) => {
     res.status(200).send("Registration page calling from server side!")
 });
+*/
 
 const PORT = 5000;
 app.listen(PORT, () => {
